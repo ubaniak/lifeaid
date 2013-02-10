@@ -1,0 +1,16 @@
+<div class="content">
+    <h3>Manage Project Status</h3>
+    <%= link_to 'Add Status', new_status_path, :class => "btn btn-primary" %>
+
+    <div class="show status">
+        <ul>
+        <% @status.each do |status| %>
+            <li>
+                <%= status.name %>
+                <%= link_to 'Edit', edit_status_path(status) %>
+                ><%= link_to 'Delete', status, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </li>
+        <% end %>
+        </ul>
+    </div>
+</div>

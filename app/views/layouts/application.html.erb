@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><% title %></title>
+            <%= render 'layouts/stylesheets' %>
+            <%= csrf_meta_tags %>
+    </head>
+    <body>
+        <div class="container-narrow">
+            <%= render 'layouts/header' %>
+
+            <% flash.each do |key, value| %>
+                <div class="flash <%= key %>"><%= value %></div>
+            <% end %>
+
+            <%= yield %>
+            <%= render 'layouts/footer' %>
+        </div>
+        <%= render 'layouts/javascript' %>
+    </body>
+</html>

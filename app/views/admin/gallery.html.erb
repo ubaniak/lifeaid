@@ -1,0 +1,23 @@
+<div class="content">
+    <h3>Manage Galleries</h3>
+    <%= link_to 'Add Gallery', new_gallery_path, :class => "btn btn-primary" %>
+    <span>Create a new picture gallery.</span>
+    <ul class="admin_edit">
+        <% @galleries.each do |gallery| %>
+            <li>
+                <div class="row">
+                    <div class="span6">
+                        <%= link_to gallery  do %>
+                            <%= gallery.title %>
+                            <%= link_to 'Manage Images', manageimage_path(gallery), :class => "btn btn-primary",:style => 'float:right;' %>
+                        <% end %>
+                    </div>
+                    <div class="spani6">
+                        <%= link_to 'Edit', edit_gallery_path(gallery) %> |
+                        <%= link_to 'Delete', gallery, method: :delete, data: { confirm: 'Are you sure?' } %>
+                    </div>
+                </div>
+            </li>
+        <% end %>
+    </ul>
+</div>

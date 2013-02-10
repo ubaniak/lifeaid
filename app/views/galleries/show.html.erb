@@ -1,0 +1,15 @@
+<div class="content">
+    <p id="notice"><%= notice %></p>
+
+    <h2>
+      <%= @gallery.title %>
+    </h2>
+
+    <div id="gallery">
+        <ul>
+            <% @gallery.images.each do |image|%>
+                <%= render image %>
+            <% end %>
+        </ul>
+    </div>
+<div>

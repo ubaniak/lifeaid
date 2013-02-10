@@ -1,0 +1,9 @@
+<li>
+    <%= link_to newsletter, :class => "newsletter_link" do %>
+        <div class="cal">
+            <div class="day"> <%= newsletter.created_at.strftime("%d") %></div>
+            <div class="month"> <%= newsletter.created_at.strftime("%b") %></div>
+        </div>
+        <%= simple_format truncate newsletter.title %>
+    <% end %>
+</li>

@@ -1,0 +1,28 @@
+<div class="content round">
+    <h2>Admin Panel</h2>
+    <ul class="admin_panel">
+      <li>
+            <%= link_to "My Settings", edit_user_path(current_user), :class => "btn btn-primary" %>
+            <span>Edit your user settings</span>
+      </li>
+      <li>
+            <%= link_to "Add New User", signup_path, :class => "btn btn-primary" %>
+            <span>Create a new administrator.</span>
+      </li>
+      <li>
+          <%= link_to 'Manage Newsletters', managenewsletter_path, :class => "btn btn-primary" %>
+      </li>
+      <li>
+          <%= link_to 'Manage Projects', manageproject_path, :class => "btn btn-primary" %>
+      </li>
+      <li>
+          <%= link_to 'Manage Photos', managegallery_path, :class => "btn btn-primary" %>
+      </li>
+      <li>
+          <%= link_to 'Manage Project Status', managestatus_path, :class => "btn btn-primary" %>
+      </li>
+      <li>
+          <%= link_to "Sign out", signout_path, :method => :delete, :class => "btn btn-primary" %>
+      </li>
+    </ul>
+</div>

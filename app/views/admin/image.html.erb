@@ -1,0 +1,16 @@
+<div class="content">
+  <%= link_to "Add image", new_gallery_image_path(@gallery), :class => "btn btn-primary" %>
+    <div id="gallery">
+    <ul>
+        <% @images.each do |image| %>
+            <li>
+                <%= image_tag image.photo.url %>
+                <div>
+                    <%= link_to 'Edit', edit_gallery_image_path(@gallery, image) %>|
+                    <%= link_to 'Delete', [@gallery, image], method: :delete, data: { confirm: 'Are you sure?' } %>
+                </div>
+            </li>
+        <% end %>
+    </ul>
+</div>
+</div>

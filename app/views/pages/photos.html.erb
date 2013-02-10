@@ -1,0 +1,31 @@
+<div class="content">
+<h1>Galleries</h1>
+<% if signed_in? %>
+  <%= link_to 'New Gallery', new_gallery_path %>
+<% end %>
+
+  <% @galleries.each do |gallery| %>
+    <% if @count == 1 %>
+      <div class="row">
+    <% end %>
+
+      <div class="span3 gallery_preview">
+        <%= link_to gallery, :title => gallery.title do %>
+            <div class="gallery_title"><%= gallery.title %></div>
+                <% if gallery.images.present? %>
+                    <%= image_tag gallery.images.first.photo.url  %>
+                <% end %>
+            <% end %>
+      </div>
+
+    <% @count+=1 %>
+    <% if @count == 4 %>
+      <% @count=1 %>
+      </div>
+    <% end %>
+  <% end %>
+
+  <% if @count < 4 && @count > 0 %>
+      </div>
+  <% end %>
+</div>

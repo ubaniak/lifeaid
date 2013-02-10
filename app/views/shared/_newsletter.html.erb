@@ -1,0 +1,20 @@
+<div>
+<% if !@newsletter.nil? %>
+    <div class="cal">
+      <div class="day"> <%= @newsletter.created_at.strftime("%d") %></div>
+      <div class="month"> <%= @newsletter.created_at.strftime("%b") %></div>
+    </div>
+    <div>
+        <H3><%= @newsletter.title %></h3>
+        <div>
+          <%= simple_format @newsletter.content %>
+        </div>
+      <span class="italics">
+        Written by:
+        <%= User.find_by_id(@newsletter.user_id).name %>
+      </span>
+    </div>
+<% else %>
+  <p> There are no news letters.</p>
+<% end %>
+</div>

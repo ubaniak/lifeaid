@@ -1,0 +1,18 @@
+<div class="content">
+    <h3>Manage Projects</h3>
+    <%= link_to 'Add Project', new_project_path, :class => "btn btn-primary" %>
+    <span>Create a new project.</span>
+    <ul class="admin_edit">
+        <% @projects.each do |project| %>
+            <div class="row">
+                <div class="span6">
+                    <%= render project %>
+                </div>
+                <div class="spani6">
+                    <%= link_to 'Edit', edit_project_path(project) %> |
+                    <%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %>
+                </div>
+            </div>
+        <% end %>
+    </ul>
+</div>

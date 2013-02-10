@@ -1,0 +1,8 @@
+<ul class="nav nav-pill pull-right">
+    <% if not signed_in? %>
+        <li><%= link_to "Admin login", signin_path %></li>
+    <% else %>
+        <li><%= link_to "Admin Page", admin_path %></li>
+        <li><%= link_to "logout", signout_path %></li>
+    <% end %>
+</ul>

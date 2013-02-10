@@ -1,0 +1,10 @@
+<li>
+    <%= link_to project, :class => "newsletter_link" do %>
+        <% if !project.status.nil? %>
+            <div id="circle" class="<%= project.status.name %>"></div>
+        <% else%>
+            <div id="circle" class="unknown"></div>
+        <% end %>
+        <%= simple_format truncate project.title %>
+    <% end %>
+</li>

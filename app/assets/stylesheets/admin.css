@@ -1,0 +1,22 @@
+
+.admin_edit
+{
+    list-style-type: none;
+    text-align: left;
+    width: 500px;
+    border-color: #CDCDCD;
+    border-style: dashed;
+    border-width: thin;
+    margin-top: 20px;
+}
+
+.admin_edit li
+{
+    height: 39px;
+    width: 80%;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-image: none;
+    border-bottom: medium dotted #CDCDCD;
+    margin: 0;
+}

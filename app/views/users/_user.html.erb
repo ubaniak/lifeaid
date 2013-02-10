@@ -1,0 +1,26 @@
+<li>
+    <div class="profile row-fluid">
+        <div class="profilepic">
+            <%= image_tag user.photo.url %>
+        </div> 
+        <div class="text">
+                <p class="user_name">
+                    <%= user.name %>
+                </p>
+                <p class="user_desc">
+                    <%= user.description %>
+                </p>
+        </div>
+        <div class="user_contact">
+            <p>
+               Email: <%= user.email %>
+            </p>
+            <p>
+               Phone#: <%= number_to_phone user.first_contact %>
+            </p>
+            <p>
+               Phone#: <%= number_to_phone user.second_contact %>
+            </p>
+        </div>
+    </div>
+</li>

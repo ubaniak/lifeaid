@@ -1,0 +1,25 @@
+<div class="content">
+    <%= render 'pages/banner' %>
+
+    <div class="row-fluid marketing">
+        <div class="span6">
+            <h4>Newsletter</h4>
+            <ul class="list_container">
+                <% @newsletters[0..5].to_a.each do |newsletter| %>
+                  <%= render newsletter %>
+                <% end %>
+            </ul>
+            <%= link_to 'View all newsletters.', '#' %>
+        </div>
+
+        <div class="span6">
+            <h4>Projects</h4>
+                <ul class="list_container project">
+                    <% @projects[0..5].to_a.each do |project| %>
+                        <%= render project %>
+                    <% end %>
+                </ul>
+                <%= link_to "View all projects", '#' %>
+        </div>
+    </div>
+</div>

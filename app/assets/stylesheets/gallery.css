@@ -1,0 +1,44 @@
+/* =======================================================================
+   Opa Gallery preview style
+   ====================================================================== */
+
+.gallery_preview a img
+{
+  height:200px;
+  width:200px;
+}
+
+.gallery_title
+{
+  width: 200px;
+  text-align: center;
+  color:#0088CC;
+  background: #b4dfff;
+}
+
+/* =======================================================================
+   Opa Light Box style
+   ====================================================================== */
+
+#gallery
+{
+  background-color: #fff;
+  padding: 10px;
+}
+
+#gallery ul { list-style: none; }
+#gallery ul li { display: inline; }
+#gallery ul img {
+  border: 5px solid #3e3e3e;
+  border-width: 5px 5px 20px;
+  height: 200px;
+  width: 200px;
+}
+#gallery ul a:hover img {
+  border: 5px solid #fff;
+  border-width: 5px 5px 20px;
+  color: #fff;
+}
+
+#gallery ul a:hover { color: #fff; }
+

@@ -1,0 +1,5 @@
+<li>
+    <%= link_to image.photo.url ,:title => image.description do %>
+        <%= lightbox_tag(image.photo.url, image.photo.url, title=image.description) %>
+    <% end %>
+</li>
