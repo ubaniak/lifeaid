@@ -3,7 +3,9 @@
     <div>
         <ul class="profiles">
             <% @users.to_a.each do |user| %>
-                <%= render user %>
+                <% if user.show_user? %>
+                    <%= render user %>
+                <% end %>
             <% end %>
         </ul>
     </div>

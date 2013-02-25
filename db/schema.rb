@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130223132840) do
+ActiveRecord::Schema.define(:version => 20130224191441) do
 
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                  :null => false
@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(:version => 20130223132840) do
     t.integer  "image_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.integer  "project_id"
   end
 
   create_table "images", :force => true do |t|
@@ -71,20 +70,7 @@ ActiveRecord::Schema.define(:version => 20130223132840) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "users", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "password_h"
-    t.string   "salt"
-    t.string   "description"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
-    t.string   "photo_file_name"
-    t.string   "photo_content_type"
-    t.integer  "photo_file_size"
-    t.datetime "photo_updated_at"
-    t.integer  "first_contact"
-    t.integer  "second_contact"
-  end
+# Could not dump table "users" because of following StandardError
+#   Unknown type 'bool' for column 'should_show'
 
 end

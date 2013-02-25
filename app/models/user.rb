@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   attr_accessor :password
-  attr_accessible :name, :email, :description ,:password, :password_confirmation, :photo, :first_contact, :second_contact
+  attr_accessible :name, :email, :description ,:password, :password_confirmation, :photo, :first_contact, :second_contact, :should_show
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
@@ -25,6 +25,10 @@ class User < ActiveRecord::Base
 
   has_many :newsletters
   has_many :projects
+
+  def show_user?
+      self.should_show == 1
+  end
 
   def has_password?(password)
     password_h == encrypt(password)
